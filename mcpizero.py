@@ -41,7 +41,11 @@ def cuboid(x1,y1,z1,x2,y2,z2,id_,type_=None):
         mc.setBlocks(x1,y1,z1,x2,y2,z2,id_,type_)
         return
     mc.setBlocks(x1,y1,z1,x2,y2,z2,id_)
-    
+def whereAmI(player=None):
+    if not player:
+        mc.player.getTilePos()
+    else:
+        mc.entity.getTilePos(player)    
 
 start()
 
